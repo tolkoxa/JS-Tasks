@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let arrNumb = [2];
+        let limitNumb = 100;
+
+        function mainCheck(limit, arr) {
+            let i = 2;
+            while (i <= limit) {
+                let check = true;
+                arr.forEach(num => {
+                    let numb = i % num;
+                    if (numb == 0) {
+                        check = false;
+                    }
+                });
+                check ? arr.push(i) & i++ : i++;
+            }
+
+            console.log('-----', arrNumb);
+            console.log('-----', i);
+            console.log('-----', limitNumb);
+        };
+
+        mainCheck(limitNumb, arrNumb);
+    </script>
+
+</body>
+
+</html>
