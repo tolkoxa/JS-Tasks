@@ -18,10 +18,27 @@
             }
             let formatNumber = new Intl.NumberFormat('ru');
             result = formatNumber.format(result);
-            console.log(`${x} в степени ${y} = ${result}`);
+            console.log(`${x} ^ ${y} = ${result}`);
         }
 
         exponentiation(8, 10);
+
+
+        //Умножение
+
+        function multiplication(x, y) {
+            let result = 0;
+            for (let i = 1; i <= y; i++) {
+                result = result + x;
+            }
+            let formatNumber = new Intl.NumberFormat('ru');
+            x = formatNumber.format(x);
+            y = formatNumber.format(y);
+            result = formatNumber.format(result);
+            console.log(`${x} * ${y} = ${result}`);
+        }
+
+        multiplication(100, 1032);
     </script>
 </body>
 
