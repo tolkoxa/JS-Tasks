@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математические операторы</title>
+</head>
+
+<body>
+    <script>
+        //Возведение в степень
+
+        function exponentiation(x, y) {
+            let result = 1;
+            for (let i = 1; i <= y; i++) {
+                result = result * x;
+            }
+            let formatNumber = new Intl.NumberFormat('ru');
+            result = formatNumber.format(result);
+            console.log(`${x} в степени ${y} = ${result}`);
+        }
+
+        exponentiation(8, 10);
+    </script>
+</body>
+
+</html>
