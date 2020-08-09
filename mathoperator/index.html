@@ -18,10 +18,10 @@
             }
             let formatNumber = new Intl.NumberFormat('ru');
             result = formatNumber.format(result);
-            console.log(`${x} ^ ${y} = ${result}`);
+            return console.log(`${x} ^ ${y} = ${result}`);
         }
 
-        exponentiation(8, 10);
+        // exponentiation(8, 10);
 
 
         //Умножение
@@ -35,10 +35,10 @@
             x = formatNumber.format(x);
             y = formatNumber.format(y);
             result = formatNumber.format(result);
-            console.log(`${x} * ${y} = ${result}`);
+            return console.log(`${x} * ${y} = ${result}`);
         }
 
-        multiplication(100, 1032);
+        // multiplication(100, 1032);
     </script>
 </body>
 

@@ -4,32 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Rubik:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>Prime Number</title>
 </head>
 
 <body>
 
-
+    <div class="container">
+        <div class="title">
+            Простое число
+        </div>
+        <div class="subtitle">
+            Простое число &#151; это натуральное (целое положительное) число, которое делится без остатка на 1 и на само себя.
+        </div>
+        <div class="form-text">
+            До какого числа вывести простые числа?
+        </div>
+        <div class="form">
+            <input class="form-inpt" type="text" id="inpt">
+            <button class="form-btn" id="btn">Вывести числа</button>
+        </div>
+        <div class="output" id="output"></div>
+        <div class="numbers" id="numbers"></div>
+    </div>
     <script>
-        let arrNumb = [2];
-        let limitNumb = 100;
-
-        function mainCheck(limit, arr) {
+        document.getElementById('btn').addEventListener('click', () => {
+            let limit = document.getElementById('inpt').value;
+            let arrNumb = [2];
+            let outputStr = document.getElementById('output');
+            document.getElementById('numbers').innerHTML = '';
             let i = 2;
+            let numbStr = '2';
+
+
             while (i <= limit) {
                 let check = true;
-                arr.forEach(num => {
+                arrNumb.forEach(num => {
                     let numb = i % num;
                     if (numb == 0) {
                         check = false;
                     }
                 });
-                check ? arr.push(i) & i++ : i++;
+                // check ? arrNumb.push(i) & i++ : i++;
+                if (check) {
+                    numbStr = `${numbStr}, ${i}`;
+                };
+                i++;
             }
 
-        };
+            numbStr = `${numbStr}.`;
 
-        mainCheck(limitNumb, arrNumb);
+            outputStr.innerHTML = `Простые числа от 1 до ${limit}`;
+            document.getElementById('numbers').insertAdjacentHTML('beforeend', `${numbStr}`);
+        });
     </script>
 
 </body>
