@@ -4,10 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <title>Математические операторы</title>
 </head>
 
 <body>
+    <div class="container">
+        <a class="section__text" href="../">
+            <<< Назад</a>
+                <p class="section__text">&nbsp;</p>
+                <p class="section__title">Возведение в степень</p>
+                <pre>
+            <code class="section__text">
+                function exponentiation(x, y) {
+                    let result = 1;
+                    for (let i = 1; i <= y; i++) {
+                        result = result * x;
+                    }
+                    let formatNumber = new Intl.NumberFormat('ru');
+                    result = formatNumber.format(result);
+                    return console.log(`${x} ^ ${y} = ${result}`);
+                }
+            </code>
+        </pre>
+                <p class="section__title">Умножение</p>
+                <pre>
+            <code class="section__text">
+                function multiplication(x, y) {
+                    let result = 0;
+                    for (let i = 1; i <= y; i++) {
+                        result = result + x;
+                    }
+                    let formatNumber = new Intl.NumberFormat('ru');
+                    x = formatNumber.format(x);
+                    y = formatNumber.format(y);
+                    result = formatNumber.format(result);
+                    return console.log(`${x} * ${y} = ${result}`);
+                }
+            </code>
+        </pre>
+    </div>
     <script>
         //Возведение в степень
 
